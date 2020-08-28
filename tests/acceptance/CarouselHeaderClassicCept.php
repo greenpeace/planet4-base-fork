@@ -1,7 +1,6 @@
 <?php
-/**
- * @group frontend
- */
+// @group frontend
+
 
 $I = new AcceptanceTester( $scenario );
 

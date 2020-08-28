@@ -1,4 +1,5 @@
 <?php
+// @group useraction
 
 $I = new AcceptanceTester($scenario);
 $I->wantTo('add a comment');

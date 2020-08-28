@@ -1,3 +1,4 @@
+@backend
 Feature: editor basics
   In order to publish content
   As a logged in admin

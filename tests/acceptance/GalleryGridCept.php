@@ -1,5 +1,6 @@
-
 <?php
+// @group gallery
+
 use \Codeception\Util\Locator;
 
 $I = new AcceptanceTester($scenario);

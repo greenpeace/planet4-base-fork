@@ -1,4 +1,6 @@
 <?php
+// @group error
+
 $I = new AcceptanceTester($scenario);
 $I->wantTo('check there are no PHP warnings');
 

@@ -1,4 +1,6 @@
 <?php
+// @group columns
+
 use \Codeception\Util\Locator;
 
 $I = new AcceptanceTester($scenario);

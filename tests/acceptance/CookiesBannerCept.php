@@ -1,4 +1,6 @@
 <?php
+// @group frontend
+
 $I = new AcceptanceTester($scenario);
 
 $I->wantTo('check cookie banner renders');

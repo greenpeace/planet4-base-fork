@@ -1,4 +1,6 @@
 <?php
+// @group error
+
 $I = new AcceptanceTester($scenario);
 $I->wantTo('check the 404 page looks nice');
 

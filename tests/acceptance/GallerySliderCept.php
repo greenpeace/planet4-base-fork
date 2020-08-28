@@ -1,10 +1,7 @@
-
 <?php
-use \Codeception\Util\Locator;
+// @group gallery
 
-/**
- * @group frontend
- */
+use \Codeception\Util\Locator;
 
 $I = new AcceptanceTester($scenario);
 

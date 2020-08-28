@@ -1,4 +1,6 @@
 <?php
+// @group columns
+
 $I = new AcceptanceTester( $scenario );
 
 $I->wantTo( 'create and check columns block images style' );

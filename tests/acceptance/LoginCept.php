@@ -1,4 +1,6 @@
 <?php
+// @group useraction
+
 $I = new AcceptanceTester($scenario);
 $I->wantTo('login to wordpress admin');
 
