@@ -88,8 +88,8 @@
 
   "extra": {
     "installer-paths": {
-      "vendor/plugins/{$name}/": ["type:wordpress-plugin"],
-      "vendor/themes/{$name}/": ["type:wordpress-theme"]
+      "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
     },
     "merge-plugin": {
       "require": "composer-local.json",
@@ -138,8 +138,8 @@
     "reset:plugins" : "rm -rf public/wp-content/plugins",
 
     "download:wordpress": "wp core download --version=5.0.3 --path=public --force",
-    "copy:plugins" : "rsync -arOJ vendor/plugins public/wp-content",
-    "copy:themes" : "rsync -arOJ vendor/themes public/wp-content",
+    "copy:plugins" : "echo 'meh'",
+    "copy:themes" : "ls -alh /app/source/public/wp-content/themes/; ls -alh /app/source/public/wp-content; ls -alh /app/source/public; ls -alh /app/source; ls -alh /app/source/vendor/*",
 
     "redis:enable" : "wp redis enable",
 
