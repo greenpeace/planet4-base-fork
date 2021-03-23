@@ -27,6 +27,7 @@ class GutenbergEditor
         $blockButton = (string) BlockSelector::BLOCK($blockName);
 
         $this->openBlockSelector();
+        $I->appendField( '.block-editor-inserter__search input[type=search]', $blockSection );
         $I->click((string) BlockSelector::SECTION($blockSection));
         $I->waitForElement($blockButton, 1);
         $I->click($blockButton);
