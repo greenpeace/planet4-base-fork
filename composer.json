@@ -60,8 +60,8 @@
   "require": {
     "cmb2/cmb2": "2.*",
     "composer/installers": "~1.0",
-    "greenpeace/planet4-master-theme" : "dev-master",
-    "greenpeace/planet4-plugin-gutenberg-blocks": "dev-master",
+    "greenpeace/planet4-master-theme" : "dev-planet-6020",
+    "greenpeace/planet4-plugin-gutenberg-blocks": "dev-planet-6020",
     "greenpeace/planet4-nginx-helper" : "2.2.*",
     "greenpeace/planet4-plugin-medialibrary" : "v1.14",
     "wikimedia/composer-merge-plugin": "2.0.*",
