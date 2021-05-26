@@ -25,7 +25,6 @@ class Selectors extends Command implements CustomCommandInterface
      */
     private $selectorClasses = [
         GutenbergEditor::class,
-        BlockSelector::class,
         Sidebar::class,
     ];
 
@@ -60,7 +59,7 @@ class Selectors extends Command implements CustomCommandInterface
     /**
      * Displays a list of available selectors
      * Highlights variable parts
-     * 
+     *
      * @return int
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -76,7 +75,7 @@ class Selectors extends Command implements CustomCommandInterface
             ]);
             $table->addRows(array_map(
                 function ($key, $val) use ($class) { return [
-                    $this->constToMethod($key, $class), 
+                    $this->constToMethod($key, $class),
                     str_replace('%s', '<fg=yellow;options=bold>%s</>', $val)
                 ]; } ,
                 $class::keys(),
@@ -95,7 +94,7 @@ class Selectors extends Command implements CustomCommandInterface
 
     /**
      * Qualifies php-enum const as methods, check if they have specific parameters declaration
-     * 
+     *
      * @param string $const Constant name
      * @param string $class Class name
      *
@@ -110,7 +109,7 @@ class Selectors extends Command implements CustomCommandInterface
                     $ns = (new \ReflectionClass($class))->getNamespaceName();
                     return str_replace($ns . '\\', '', $param->getType())
                         . ' $' . $param->getName();
-                }, 
+                },
                 $rfl->getParameters()
             ));
 

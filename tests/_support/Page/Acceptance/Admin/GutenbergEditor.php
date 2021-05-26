@@ -24,7 +24,7 @@ class GutenbergEditor
     public function addBlock(BlockSection $blockSection, BlockName $blockName): void
     {
         $I = $this->tester;
-        $blockButton = (string) BlockSelector::BLOCK($blockName);
+        $blockButton = BlockSelector::block($blockName);
 
         $this->openBlockSelector();
         //$I->click((string) BlockSelector::SECTION($blockSection));
@@ -35,6 +35,6 @@ class GutenbergEditor
     public function openBlockSelector(): void
     {
         $I = $this->tester;
-        $I->click((string) BlockSelector::MAIN_BUTTON());
+        $I->click(BlockSelector::MAIN_BUTTON);
     }
 }
