@@ -4,6 +4,10 @@
   "license": "GPL-3.0-or-later",
   "repositories": [
     {
+      "type": "artifact",
+      "url": "/app/source/artifacts/"
+    },
+    {
       "type": "composer",
       "url": "https://wpackagist.org"
     },

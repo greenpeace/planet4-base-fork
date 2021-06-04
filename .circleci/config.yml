@@ -7,7 +7,7 @@ docker_auth: &docker_auth
 
 defaults: &defaults
   docker:
-    - image: greenpeaceinternational/p4-builder:latest
+    - image: greenpeaceinternational/p4-builder:artifact
       auth:
         <<: *docker_auth
   working_directory: /home/circleci/
