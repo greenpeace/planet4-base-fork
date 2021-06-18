@@ -1,6 +1,11 @@
 ---
 version: 2.1
 
+parameters:
+  promote:
+    type: boolean
+    default: false
+
 docker_auth: &docker_auth
   username: $DOCKERHUB_USERNAME
   password: $DOCKERHUB_PASSWORD
@@ -188,6 +193,14 @@ jobs:
                 ./scripts/rollback.sh planet4-$i ${CIRCLE_TOKEN}
               done
 
+  promote:
+    docker:
+      - image: greenpeaceinternational/circleci-base:latest
+        auth:
+          <<: *docker_auth
+    steps:
+      - checkout
+
 workflows:
   develop:
     jobs:
@@ -239,6 +252,12 @@ workflows:
           pipeline: main
           requires:
             - test
+
+  promote:
+    when: << pipeline.parameters.promote >>
+    jobs:
+      - promote:
+          context: org-global
 
   production:
     jobs:
